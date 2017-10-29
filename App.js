@@ -4,12 +4,14 @@ import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from './screens/HomeScreen';
 import ProductsScreen from './screens/ProductsScreen';
+import ProductDescriptionScreen from './screens/ProductDescriptionScreen';
 
 import styles from './styles'
 
 const RootNavigation = StackNavigator({
   Home: { screen: HomeScreen },
-  Products: { screen: ProductsScreen }
+  Products: { screen: ProductsScreen },
+  ProductDescription: { screen : ProductDescriptionScreen }
 });
 
 export default RootNavigation;

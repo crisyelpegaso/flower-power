@@ -4,7 +4,9 @@ import { Alert, Button, Image, StyleSheet, Text, View } from 'react-native';
 import styles from '../styles'
 
 export default class HomeScreen extends React.Component {
-
+  static navigationOptions = {
+    title: 'Home',
+  };
   _onLongPressButton() {
     Alert.alert('Woooo, easy tiger!')
   }

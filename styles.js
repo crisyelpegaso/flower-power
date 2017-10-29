@@ -21,6 +21,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
     // TODO : fixme
     // fontFamily: 'San Francisco'
+  },
+  productContainer : {
+    flex : 1
+  },
+  productImage : {
+    width : 60,
+    height : 60
+  },
+  productDescription : {
+    width : 60,
+    height : 60 
   }
 });
 
