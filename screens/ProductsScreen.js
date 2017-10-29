@@ -13,19 +13,27 @@ const products = [
 export default class ProductsScreen extends React.Component {
 
   static navigationOptions = {
-    title: 'Products',
+    title: 'Products'
   };
   render() {
     return (
-    	<FlatList data={products} renderItem={ 
-    	 	({item}) => <ProductRow name={item.name} pic={item.picUrl} onClick={() => this._displayProductDescription(item)}/>
-    	}/>
+    	<View>
+    		<FlatList data={products} renderItem={ 
+    	 		({item}) => <ProductRow name={item.name} pic={item.picUrl} onClick={() => this._displayProductDescription(item)}/>
+    		}/>
+    		<Button onPress={ () => this._goToCart() } title='Go to cart'/>
+    	</View>	
     );
   }
 
   _displayProductDescription(item) {
   	const { navigate } = this.props.navigation;
-  	navigate('ProductDescription', {itemName : item.name});
+  	navigate('ProductDescription', { item });
+  }
+
+  _goToCart() {
+  	const { navigate } = this.props.navigation;
+  	navigate('Cart');	
   }
 
 }
